@@ -207,3 +207,29 @@ function sbtech_logo_section(){
 
 }
 sbtech_logo_section();
+
+// Section 04
+function sbtech_footer_section(){
+	new \Kirki\Section(
+		'sbtech_footer_section',
+		[
+			'title'       => esc_html__( 'Techub Footer text', 'sbtech' ),
+			'description' => esc_html__( 'Techub Footer CopyRight Section', 'sbtech' ),
+			'panel'       => 'sbtech_panel',
+			'priority'    => 160,
+		]
+	);
+
+	// techub footer text field
+	new \Kirki\Field\Text(
+		[
+			'settings' => 'sbtech_footer_text',
+			'label'    => esc_html__( 'Footer CopyRight text field', 'sbtech' ),
+			'section'  => 'sbtech_footer_section',
+			'default'  => esc_html__( 'Copyright &copy; 2022 Bloggar by sbtech', 'sbtech' ),
+			'priority' => 10,
+		]	
+	);
+
+}
+sbtech_footer_section();

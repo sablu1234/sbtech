@@ -36,6 +36,8 @@ function sbtech_theme_support(){
         'main_menu' => __( 'Main Menu', 'sbtech' ),
     ) );
 
+    remove_theme_support( 'widgets-block-editor' );
+
         // register_nav_menus( array(
 	    // 	'main-menu' => __( 'Main Menu', 'techub' ),
 		// ) );
@@ -43,6 +45,49 @@ function sbtech_theme_support(){
     // remove_theme_support( 'widgets-block-editor' );
 }
 add_action( 'after_setup_theme', 'sbtech_theme_support' );
+
+/**
+ * Add a sidebar.
+ */
+function sbtech_sidebar_register() {
+	register_sidebar( array(
+		'name'          => __( 'Footer column 01', 'sbtech' ),
+		'id'            => 'footer-1',
+		'description'   => __( 'Widgets in this area will be shown on Footer column 01', 'sbtech' ),
+		'before_widget' => '<div id="%1$s" class="widget about-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer column 02', 'sbtech' ),
+		'id'            => 'footer-2',
+		'description'   => __( 'Widgets in this area will be shown on Footer column 02', 'sbtech' ),
+		'before_widget' => '<div id="%1$s" class="widget link-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer column 03', 'sbtech' ),
+		'id'            => 'footer-3',
+		'description'   => __( 'Widgets in this area will be shown on Footer column 03', 'sbtech' ),
+		'before_widget' => '<div id="%1$s" class="widget tag-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer column 04', 'sbtech' ),
+		'id'            => 'footer-4',
+		'description'   => __( 'Widgets in this area will be shown on Footer column 04', 'sbtech' ),
+		'before_widget' => '<div id="%1$s" class="widget social-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'sbtech_sidebar_register' );
 
 
 include_once get_template_directory() .'/inc/common/scripts.php';
