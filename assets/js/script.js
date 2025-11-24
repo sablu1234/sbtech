@@ -800,5 +800,14 @@
     });
 
 
+    // Swiper slider use in post gallery
+    var swiper = new Swiper(".tp-post-slider", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 
 })(window.jQuery);
+
+

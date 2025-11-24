@@ -26,6 +26,7 @@ function sbtech_theme_scripts() {
 	wp_enqueue_script( 'jquery-dlmenu', get_template_directory_uri() . '/assets/js/jquery.dlmenu.js', array( 'jquery' ), '1.0.1', true );
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array( 'jquery' ), '3.6.0', true );
 	wp_enqueue_script( 'modernizr-custom', get_template_directory_uri() . '/assets/js/modernizr.custom.js', array( 'jquery' ), '2.6.2', true );
+	wp_enqueue_script( 'swiper-slider', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array( 'jquery' ), '2.6.2', true );
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/script.js', array( 'jquery' ), '1.1.1', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

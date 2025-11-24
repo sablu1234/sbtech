@@ -98,3 +98,9 @@ if ( class_exists( 'Kirki' ) ) {
 		include_once get_template_directory() .'/inc/techub-kirki.php';
 }
 
+    // Remove width and height attributes from post thumbnails
+    add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10);
+    function remove_thumbnail_dimensions($html) {
+        $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
+        return $html;
+    }

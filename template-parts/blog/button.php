@@ -1,0 +1,1 @@
+<a href="<?php the_permalink(); ?>" class="read-more"><?php echo esc_html__( 'READ MORE...', 'sbtech' )?></a>
