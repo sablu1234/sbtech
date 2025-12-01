@@ -22,23 +22,7 @@
                             <p><?php _e( 'No Posts To Display.' ); ?></p>
                         <?php endif; ?> 
 
-                        <div class="pagination-wrapper pagination-wrapper-left">
-                            <ul class="pg-pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <i class="fi ti-angle-left"></i>
-                                    </a>
-                                </li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <i class="fi ti-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <?php sbtech_navigation(); ?>
                     </div>
                 </div>
                 <div class="col col-lg-4">

@@ -170,3 +170,21 @@ function sbtech_kess( $svg = '' ) {
 
 	return wp_kses( $svg, $allowed_html );
 }
+
+
+// 
+// sbtech_navigation
+function sbtech_navigation(){
+   $pages = paginate_links( array( 
+       'type' => 'array',
+       'prev_text'    => __('<i class="fi ti-angle-left"></i>','sbtech'),
+       'next_text'    => __('<i class="fi ti-angle-right"></i>','sbtech'),
+   ) );
+       if( $pages ) {
+       echo '<div class="pagination-wrapper pagination-wrapper-left"> <ul class="pg-pagination">';
+       foreach ( $pages as $page ) {
+           echo '<li>'. $page.'</li>';
+       }
+       echo '</ul></div>';
+   }
+}
