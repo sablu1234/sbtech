@@ -188,3 +188,29 @@ function sbtech_navigation(){
        echo '</ul></div>';
    }
 }
+
+
+/**
+ * Generate custom search form
+ *
+ * @param string $form Form HTML.
+ * @return string Modified form HTML.
+ */
+// function sbtech_search_form( $form ) {
+// 	$form = '<form role="search" method="get" action="' . home_url( '/' ) . '">
+//    <div>
+//       <input type="text" value="' . get_search_query() . '" name="s" class="form-control" placeholder="Search Post..">
+//       <button type="submit"><i class="ti-search"></i></button>
+//    </div>
+// </form>';
+
+// 	return $form;
+// }
+// add_filter( 'get_search_form', 'sbtech_search_form' );
+
+
+
+function sbtech_tags(){
+   $tags = get_the_tags();
+   var_dump($tags);
+}

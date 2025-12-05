@@ -8,3 +8,13 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sbtech
 */
+
+.img-holder img {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+}
+
+.details h4 a {
+    font-size: 1.2rem;
+}

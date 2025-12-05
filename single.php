@@ -10,7 +10,7 @@
 <div class="page-wrapper">
 
     <!-- start wpo-blog-pg-section -->
-    <section class="wpo-blog-pg-section section-padding">
+    <section class="wpo-blog-single-section section-padding">
         <div class="container">
             <div class="row">
                 <div class="col col-lg-8">

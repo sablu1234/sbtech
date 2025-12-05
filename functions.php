@@ -51,6 +51,16 @@ add_action( 'after_setup_theme', 'sbtech_theme_support' );
  */
 function sbtech_sidebar_register() {
 	register_sidebar( array(
+		'name'          => __( 'Blog Sidebar', 'sbtech' ),
+		'id'            => 'blog-sidebar',
+		'description'   => __( 'Widgets in this area will be shown on Blog Sidebar', 'sbtech' ),
+		'before_widget' => '<div id="%1$s" class="widget search-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
 		'name'          => __( 'Footer column 01', 'sbtech' ),
 		'id'            => 'footer-1',
 		'description'   => __( 'Widgets in this area will be shown on Footer column 01', 'sbtech' ),
@@ -93,6 +103,8 @@ add_action( 'widgets_init', 'sbtech_sidebar_register' );
 include_once get_template_directory() .'/inc/common/scripts.php';
 include_once get_template_directory() .'/inc/template-function.php';
 include_once get_template_directory() .'/inc/nav-walker.php';
+include_once get_template_directory() .'/inc/nav-walker.php';
+include_once get_template_directory() .'/inc/category-list.php';
 
 if ( class_exists( 'Kirki' ) ) {
 		include_once get_template_directory() .'/inc/techub-kirki.php';
